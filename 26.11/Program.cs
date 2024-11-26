@@ -28,8 +28,11 @@ namespace _26._11
 
             match_string(s, pattern);
 
-            proverka();
+            string pochta = "Моя почта - fdhdfsdfhkf@gmail.com";
 
+            string pattern1 = @"\w{4}\@\w{5}\.\w{3}";
+
+            validacia(pochta, pattern1);
         
         }
 
@@ -62,6 +65,20 @@ namespace _26._11
             else
             {
                 Console.WriteLine("Номер не найден!");
+            }
+        }
+
+        public static void validacia(string input,string match)
+        {
+            Match k = Regex.Match(input,match);
+            if (k.Success)
+            {
+                Console.WriteLine("Почта найдена!");
+
+            }
+            else
+            {
+                Console.WriteLine("Почта не найдена!");
             }
         }
     }
