@@ -22,16 +22,34 @@ namespace _26._11
 
 
 
-            string s = "Мой номер - 89-37-029-45-3";
+            string s = "Мой номер - 89-37-029-45-33";
 
             string pattern = @"\d{2}-\d{2}-\d{3}-\d{2}-\d{2}";
 
             match_string(s, pattern);
 
+            proverka();
 
         
         }
 
+        public static void proverka()
+        {
+
+            Console.Write("Пример: 89-37-029-45-33 \n");
+            Console.Write("Введите номер телефона:");
+            string number = Console.ReadLine();
+
+
+            if (number == "89-37-029-45-33")
+            {
+                Console.WriteLine("Номер введен правильно!");
+            }
+            else
+            {
+                Console.WriteLine("Номер введен неправильно!");
+            }
+        }
         public static void match_string(string input, string match)
         {
             Match m  = Regex.Match(input, match);
