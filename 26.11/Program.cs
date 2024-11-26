@@ -30,7 +30,7 @@ namespace _26._11
 
             string pochta = "Моя почта - fdhdfsdfhkf@gmail.com";
 
-            string pattern1 = @"\w{4}\@\w{5}\.\w{3}";
+            string pattern1 = @"[a-z0-9]+\@[a-z]+\.[a-z]+$";
 
             validacia(pochta, pattern1);
         
